@@ -1,3 +1,4 @@
+import 'package:bravon_flutter/screens/forgot_password_screen.dart';
 import 'package:flutter/material.dart';
 import 'screens/splash_screen.dart';
 import 'screens/login_screen.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.splashScreen: (context) => const SplashScreen(),
         AppRoutes.loginScreen: (context) => const LoginScreen(),
         AppRoutes.createAccountScreen: (context) => const CreateAccountScreen(),
+        AppRoutes.forgotPasswordScreen: (context) => const ForgotPasswordScreen(), 
       },
     );
   }

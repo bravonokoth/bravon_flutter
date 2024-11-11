@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bravon_flutter/screens/splash_screen.dart';
+import 'package:bravon_flutter/widgets/custom_app_bar.dart';  // Import the CustomAppBar
 
 class CreateAccountScreen extends StatefulWidget {
   const CreateAccountScreen({super.key});
@@ -15,22 +16,14 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
-  @override
+ @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Create Account'),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            // Navigate back to the SplashScreen instead of the previous screen
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => const SplashScreen()),
-            );
-          },
-        ),
-      ),
+      backgroundColor: const Color(0xFFB3D9F7), // Pale blue background
+      appBar: CustomAppBar(
+        title: 'Sign Up', // The app bar title is now "Login"
+        showBackButton: true, // Show the back button
+      ),// Use CustomAppBar here
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Card(
